@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "MyApp",
+    "name": "main",
     "slug": "MyApp",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -22,6 +22,14 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos  and  let's you add them to your product."
+        }
+      ]
+    ]
   }
 }

@@ -1,0 +1,33 @@
+interface UserProfile {
+  id: string;
+  name: string;
+  avatar?: string;
+}
+
+interface Chat {
+  text: string;
+  time: string;
+  id: string;
+  viewed: boolean;
+  user: UserProfile;
+}
+
+export interface Conversation {
+  id: string;
+  chats: Chat[];
+  peerProfile: { avatar?: string; name: string; id: string };
+}
+
+type UpdatePayload = {
+  chat: Chat;
+  conversationId: string;
+  peerProfile: UserProfile;
+};
+
+interface InitialState {
+  conversations: Conversation[];
+}
+
+const initialState: InitialState = {
+  conversations: [],
+};
